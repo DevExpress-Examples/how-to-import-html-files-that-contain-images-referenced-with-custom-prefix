@@ -7,7 +7,7 @@ Imports DevExpress.Office.Services
 
 Namespace RichIUriStreamProviderExample
     Partial Public Class Form1
-        Inherits Form
+        Inherits DevExpress.XtraEditors.XtraForm
 
         Private basePath As String
 
@@ -21,7 +21,7 @@ Namespace RichIUriStreamProviderExample
             uriStreamService.RegisterProvider(New CustomUriStreamProvider(basePath, "bmp"))
         End Sub
 
-        Private Sub simpleButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles simpleButton1.Click
+        Private Sub btnImportFile_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnImportFile.Click
             richEditControl1.LoadDocument(basePath & "test.html")
         End Sub
     End Class
@@ -57,11 +57,10 @@ Namespace RichIUriStreamProviderExample
         Public Function GetStream(ByVal url As String) As Stream Implements IUriStreamProvider.GetStream
             Dim fileName As String = String.Format("{0}.{1}", url.Replace("cid:", String.Empty), ImageExtension)
             Dim memoryStream As New MemoryStream()
-            Dim image As Image = System.Drawing.Image.FromFile(BasePath & fileName)
-
-            image.Save(memoryStream, ImageFormat.Bmp)
+            Using image As Image = System.Drawing.Image.FromFile(BasePath & fileName)
+                image.Save(memoryStream, ImageFormat.Bmp)
+            End Using
             memoryStream.Seek(0, SeekOrigin.Begin)
-
             Return memoryStream
         End Function
     End Class

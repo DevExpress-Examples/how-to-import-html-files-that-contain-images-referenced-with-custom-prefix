@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnImportFile = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // richEditControl1
@@ -33,31 +33,33 @@
             this.richEditControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richEditControl1.Location = new System.Drawing.Point(9, 10);
-            this.richEditControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
+            this.richEditControl1.Location = new System.Drawing.Point(12, 12);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richEditControl1.Name = "richEditControl1";
+            this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
             this.richEditControl1.Options.VerticalScrollbar.Visibility = DevExpress.XtraRichEdit.RichEditScrollbarVisibility.Hidden;
-            this.richEditControl1.Size = new System.Drawing.Size(497, 347);
+            this.richEditControl1.Size = new System.Drawing.Size(663, 427);
             this.richEditControl1.TabIndex = 0;
-            this.richEditControl1.Text = "richEditControl1";
             // 
-            // simpleButton1
+            // btnImportFile
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(9, 362);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(101, 23);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Import Test File";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnImportFile.Location = new System.Drawing.Point(12, 446);
+            this.btnImportFile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImportFile.Name = "btnImportFile";
+            this.btnImportFile.Size = new System.Drawing.Size(135, 28);
+            this.btnImportFile.TabIndex = 2;
+            this.btnImportFile.Text = "Import Test File";
+            this.btnImportFile.Click += new System.EventHandler(this.btnImportFile_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 397);
-            this.Controls.Add(this.simpleButton1);
+            this.ClientSize = new System.Drawing.Size(687, 489);
+            this.Controls.Add(this.btnImportFile);
             this.Controls.Add(this.richEditControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -67,7 +69,7 @@
         #endregion
 
         private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnImportFile;
     }
 }
 

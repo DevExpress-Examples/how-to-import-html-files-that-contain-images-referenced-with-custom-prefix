@@ -24,47 +24,51 @@
         ''' </summary>
         Private Sub InitializeComponent()
             Me.richEditControl1 = New DevExpress.XtraRichEdit.RichEditControl()
-            Me.simpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+            Me.btnImportFile = New DevExpress.XtraEditors.SimpleButton()
             Me.SuspendLayout()
-            ' 
-            ' richEditControl1
-            ' 
+            '
+            'richEditControl1
+            '
             Me.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple
-            Me.richEditControl1.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
-            Me.richEditControl1.Location = New System.Drawing.Point(9, 10)
-            Me.richEditControl1.Margin = New System.Windows.Forms.Padding(2)
+            Me.richEditControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel
+            Me.richEditControl1.Location = New System.Drawing.Point(10, 12)
+            Me.richEditControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.richEditControl1.Name = "richEditControl1"
+            Me.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText
             Me.richEditControl1.Options.VerticalScrollbar.Visibility = DevExpress.XtraRichEdit.RichEditScrollbarVisibility.Hidden
-            Me.richEditControl1.Size = New System.Drawing.Size(497, 347)
+            Me.richEditControl1.Size = New System.Drawing.Size(580, 427)
             Me.richEditControl1.TabIndex = 0
-            Me.richEditControl1.Text = "richEditControl1"
-            ' 
-            ' simpleButton1
-            ' 
-            Me.simpleButton1.Location = New System.Drawing.Point(9, 362)
-            Me.simpleButton1.Name = "simpleButton1"
-            Me.simpleButton1.Size = New System.Drawing.Size(101, 23)
-            Me.simpleButton1.TabIndex = 2
-            Me.simpleButton1.Text = "Import Test File"
-            ' 
-            ' Form1
-            ' 
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            '
+            'btnImportFile
+            '
+            Me.btnImportFile.Location = New System.Drawing.Point(10, 446)
+            Me.btnImportFile.Margin = New System.Windows.Forms.Padding(4)
+            Me.btnImportFile.Name = "btnImportFile"
+            Me.btnImportFile.Size = New System.Drawing.Size(118, 28)
+            Me.btnImportFile.TabIndex = 2
+            Me.btnImportFile.Text = "Import Test File"
+            '
+            'Form1
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(515, 397)
-            Me.Controls.Add(Me.simpleButton1)
+            Me.ClientSize = New System.Drawing.Size(601, 489)
+            Me.Controls.Add(Me.btnImportFile)
             Me.Controls.Add(Me.richEditControl1)
-            Me.Margin = New System.Windows.Forms.Padding(2)
+            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Name = "Form1"
             Me.Text = "Form1"
             Me.ResumeLayout(False)
 
         End Sub
 
-        #End Region
+#End Region
 
         Private richEditControl1 As DevExpress.XtraRichEdit.RichEditControl
-        Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
+        Private WithEvents btnImportFile As DevExpress.XtraEditors.SimpleButton
     End Class
 End Namespace
 
