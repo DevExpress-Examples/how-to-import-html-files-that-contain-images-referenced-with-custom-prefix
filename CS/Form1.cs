@@ -15,7 +15,7 @@ namespace RichIUriStreamProviderExample
         {
             InitializeComponent();
 
-            basePath = Directory.GetCurrentDirectory() + @"\..\..\TestDocs\";
+            basePath = Directory.GetCurrentDirectory() + @"\TestDocs\";
 
             // Custom IUriStreamProvider registration
             IUriStreamService uriStreamService = richEditControl1.GetService<IUriStreamService>();

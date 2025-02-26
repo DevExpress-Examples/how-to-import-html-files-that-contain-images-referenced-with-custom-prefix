@@ -14,7 +14,7 @@ Namespace RichIUriStreamProviderExample
         Public Sub New()
             InitializeComponent()
 
-            basePath = Directory.GetCurrentDirectory() & "\..\..\TestDocs\"
+            basePath = Directory.GetCurrentDirectory() & "\TestDocs\"
 
             ' Custom IUriStreamProvider registration
             Dim uriStreamService As IUriStreamService = richEditControl1.GetService(Of IUriStreamService)()
