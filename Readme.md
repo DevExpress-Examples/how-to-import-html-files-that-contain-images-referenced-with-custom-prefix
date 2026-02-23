@@ -3,22 +3,24 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
+
+# Import HTML files containing images referenced using custom prefix
+By default, `RichEditControl` can import HTML files that contain embedded images or links to external images specified via the `src` attribute as an image URL. In some cases, a web file may reference images in a custom manner (for example, using the `cid` prefix in the `img src` attribute, as commonly found in email files).
+
+In such scenarios, you should implement and register a custom **IUriStreamProvider** to ensure that these files are imported into the `RichEditControl` correctly. This example demonstrates how to retrieve an image referenced with the `"cid"` prefix from an external file in **BMP** format.
+
+**See Also**
+
+- [Building a mail application with the RichEditControl](https://www.devexpress.com/Support/Center/p/E2216)
+
+<!-- feedback -->
 <!-- default file list -->
-*Files to look at*:
+## Files to look at
 
 * [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
 * [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
 <!-- default file list end -->
-# How to import HTML files containing images referenced using custom prefix
 
-
-<p>By default, RichEditControl can import HTML files containing embedded images or links to external images with the src attribute specified as an image URL. Occasionally, you may have a web file where images are referenced in a custom manner (e.g. using the prefix 'cid' in the img src attribute, as in email files). In this scenario, you should implement and register a custom <strong>IUriStreamProvider</strong> to import these files into a RichEditControl correctly. This example illustrates the technique used to get an image referenced with the "cid" prefix from an external file in "bmp" format.</p><p>This approach is similar to the technique mentioned in the <a href="http://community.devexpress.com/blogs/theonewith/archive/2011/01/20/business-letters-and-mail-merge-with-rich-text-edit-part-1.aspx"><u>Business Letters and Mail Merge with Rich Text Edit (Part 1)</u></a> blog post. The reverse approach (i.e. modifying image references when exporting) implies using a custom <strong>IUriProvider</strong><strong>,</strong> as described in the <a href="http://community.devexpress.com/blogs/theonewith/archive/2011/01/20/business-letters-and-mail-merge-with-rich-text-edit-part-2.aspx"><u>Business Letters and Mail Merge with Rich Text Edit (Part 2)</u></a> blog post.</p><p><strong>See Also:</strong><br />
-<a href="https://www.devexpress.com/Support/Center/p/E2216">Building a mail application with the RichEditControl</a></p>
-
-<br/>
-
-
-<!-- feedback -->
 ## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-import-html-files-that-contain-images-referenced-with-custom-prefix&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-import-html-files-that-contain-images-referenced-with-custom-prefix&~~~was_helpful=no)
